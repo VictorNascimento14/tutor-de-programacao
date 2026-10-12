@@ -1,0 +1,168 @@
+/* =========================================================================
+   Design tokens
+   ========================================================================= */
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  /* ----------------------------------------------------------- cores base */
+  --ink-900: #05060a;
+  --ink-800: #080a11;
+  --ink-700: #0c0f18;
+  --ink-600: #11151f;
+
+  --surface: rgba(255, 255, 255, 0.034);
+  --surface-2: rgba(255, 255, 255, 0.055);
+  --surface-3: rgba(255, 255, 255, 0.08);
+  --surface-solid: #0e1118;
+
+  --border: rgba(255, 255, 255, 0.075);
+  --border-2: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.2);
+
+  --text: #e9edf7;
+  --text-2: #a6b0c4;
+  --text-3: #6b7489;
+  --text-4: #4a5162;
+
+  /* --------------------------------------------------------------- marca */
+  --brand: #7c5cff;
+  --brand-2: #a78bfa;
+  --brand-3: #c4b5fd;
+  --brand-soft: rgba(124, 92, 255, 0.14);
+  --brand-glow: rgba(124, 92, 255, 0.4);
+
+  --accent: #22d3ee;
+  --accent-soft: rgba(34, 211, 238, 0.14);
+
+  /* ----------------------------------------------------------- semantica */
+  --critical: #ff4d6d;
+  --high: #ff8a4c;
+  --medium: #fbbf24;
+  --low: #38bdf8;
+  --info: #94a3b8;
+  --success: #34d399;
+
+  --critical-soft: rgba(255, 77, 109, 0.14);
+  --high-soft: rgba(255, 138, 76, 0.14);
+  --medium-soft: rgba(251, 191, 36, 0.14);
+  --low-soft: rgba(56, 189, 248, 0.14);
+  --info-soft: rgba(148, 163, 184, 0.12);
+  --success-soft: rgba(52, 211, 153, 0.14);
+
+  /* ------------------------------------------------------------ tipografia */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --code-size: 13px;
+  --code-line: 21px;
+
+  /* ---------------------------------------------------------------- forma */
+  --r-xs: 7px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-full: 999px;
+
+  /* --------------------------------------------------------------- sombra */
+  --sh-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --sh-md: 0 4px 16px -4px rgba(0, 0, 0, 0.45);
+  --sh-lg: 0 18px 50px -12px rgba(0, 0, 0, 0.65);
+  --sh-xl: 0 40px 90px -20px rgba(0, 0, 0, 0.8);
+  --sh-glow: 0 0 0 1px var(--brand-soft), 0 12px 40px -10px var(--brand-glow);
+
+  /* --------------------------------------------------------------- easing */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-snap: cubic-bezier(0.2, 0.9, 0.2, 1);
+
+  --t-fast: 140ms;
+  --t-base: 240ms;
+  --t-slow: 420ms;
+  --t-slower: 700ms;
+
+  /* -------------------------------------------------------------- layout */
+  --sidebar-w: 272px;
+  --topbar-h: 72px;
+  --gap: 18px;
+}
+
+/* ====================================================== tema claro ====== */
+:root[data-theme='light'] {
+  --ink-900: #f4f6fb;
+  --ink-800: #eef1f8;
+  --ink-700: #e8ecf5;
+  --ink-600: #ffffff;
+
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-2: rgba(255, 255, 255, 0.92);
+  --surface-3: rgba(14, 18, 30, 0.045);
+  --surface-solid: #ffffff;
+
+  --border: rgba(14, 18, 30, 0.085);
+  --border-2: rgba(14, 18, 30, 0.13);
+  --border-strong: rgba(14, 18, 30, 0.22);
+
+  --text: #10141f;
+  --text-2: #4d5565;
+  --text-3: #767f91;
+  --text-4: #9aa2b1;
+
+  --brand: #6d45f5;
+  --brand-2: #7c5cff;
+  --brand-3: #5b32e0;
+  --brand-soft: rgba(109, 69, 245, 0.1);
+  --brand-glow: rgba(109, 69, 245, 0.25);
+
+  --accent: #0891b2;
+  --accent-soft: rgba(8, 145, 178, 0.1);
+
+  --critical: #e11d48;
+  --high: #ea580c;
+  --medium: #ca8a04;
+  --low: #0284c7;
+  --info: #64748b;
+  --success: #059669;
+
+  --sh-sm: 0 1px 2px rgba(14, 18, 30, 0.06);
+  --sh-md: 0 4px 16px -4px rgba(14, 18, 30, 0.12);
+  --sh-lg: 0 18px 50px -14px rgba(14, 18, 30, 0.18);
+  --sh-xl: 0 40px 90px -24px rgba(14, 18, 30, 0.22);
+}
+
+/* ============================================= tokens de sintaxe ======== */
+:root {
+  --t-comment: #5a6477;
+  --t-string: #7fe3a0;
+  --t-number: #ffb86b;
+  --t-keyword: #c084fc;
+  --t-boolean: #ff7b9c;
+  --t-class: #7dd3fc;
+  --t-func: #8ab4ff;
+  --t-tag: #ff8aa8;
+  --t-attr: #fcd34d;
+  --t-operator: #9aa4b8;
+  --t-punct: #68718a;
+  --t-decorator: #22d3ee;
+}
+
+:root[data-theme='light'] {
+  --t-comment: #8a93a5;
+  --t-string: #0f7b4f;
+  --t-number: #b45309;
+  --t-keyword: #7c3aed;
+  --t-boolean: #be123c;
+  --t-class: #0369a1;
+  --t-func: #1d4ed8;
+  --t-tag: #be185d;
+  --t-attr: #a16207;
+  --t-operator: #475569;
+  --t-punct: #94a3b8;
+  --t-decorator: #0e7490;
+}

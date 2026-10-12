@@ -1,0 +1,25 @@
+{
+  "name": "tutor-de-programacao",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Assistente Tecnico de Code Review e Resolucao de Bugs - Tutor de Programacao",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "smoke": "node scripts/smoke.js",
+    "test:jev": "node scripts/test-jev.js",
+    "test:cache": "node scripts/test-chatbot-cache.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "code-review",
+    "debugging",
+    "tutor",
+    "static-analysis"
+  ],
+  "license": "MIT"
+}
